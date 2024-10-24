@@ -21,7 +21,7 @@ header {
 h1 {
     justify-self: center;
     font-family: 'Qilkabold';
-    font-size: 80px;
+    font-size: 50px;
     margin: 20px;
 }
 
@@ -52,23 +52,6 @@ nav a:hover {
     transform: scale(1.1);
 }
 
-.Tittle {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    font-family: 'Palaise';
-    font-size: 18px;
-    width: 95%;
-}
-
-.homePic {
-    width: 100%;
-    height: auto;
-    max-width: 500px;
-    margin: 40px;
-    border-radius: 20px;
-}
-
 .media {
     margin-left: 40px;
 }
@@ -87,12 +70,23 @@ nav a:hover {
     transform: scale(1.1);
 }
 
-.text {
+
+.content-row{
+    font-family: 'Palaise';
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: start;
+}
+
+.text-content{
+    width: 50%;
     margin-top: 150px;
+    margin-left: 20px;
     text-align: center;
 }
 
-.text a {
+.text-content a, .text-content-center a{
     display: inline-block;
     margin: 8px;
     color: #f43a09;
@@ -103,31 +97,56 @@ nav a:hover {
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.text a:hover {
+.text-content-center a:hover{
     transform: scale(1.1);
     background-color: #f43a09;
     color: #fff;
 }
 
-.location {
-    font-family: 'Queensides';
+.text-content a:hover {
+    transform: scale(1.1);
+    background-color: #f43a09;
+    color: #fff;
+}
+
+
+
+.image-content img {
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+    margin: 40px;
+    border-radius: 20px;
+}
+
+.content-center{
+    display: flex;
+    flex-direction: column;
+}
+
+.text-content-center{
+    font-family: 'Palaise';
     text-align: center;
-    font-size: 20px;
-    margin: 40px 0;
 }
 
-.location iframe {
-    width: 100vw;
-    height: 450px;
-    border-radius: 0;
-    border: none;
-    margin: 0;
-    padding: 0;
+.image-row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px;
 }
 
-.location p {
-    margin-bottom: 20px;
-    font-size: 18px;
+.image-row img {
+    width: 22%; /* Set width */
+    height: 250px; /* Set a fixed height */
+    object-fit: cover; /* Ensures images fill the set dimensions */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.image-row img:hover{
+    transform: scale(1.1);
 }
 
 footer {
