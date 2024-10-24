@@ -2,6 +2,7 @@ body, html {
     margin: 0;
     padding: 0;
     width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 header {
@@ -9,7 +10,7 @@ header {
     flex-direction: row;
     justify-content: space-between;
     padding: 10px;
-    width: 99vw;
+    width: 100%; /* Changed from 99vw to 100% to prevent overflow */
     box-sizing: border-box;
     border-radius: 6px;
     text-align: center;
@@ -34,14 +35,13 @@ nav a {
     color: black;
     display: inline-block;
     transition: transform 0.5s ease, color 0.5s ease;
-    transform-origin: center bottom; /* Scale from the bottom to prevent growing vertically */
+    transform-origin: center bottom;
 }
 
 nav a:hover {
     color: #ffb766;
     transform: scale(1.1);
 }
-
 
 .momo-sticker {
     margin-left: 20px;
@@ -109,7 +109,6 @@ nav a:hover {
     color: #fff;
 }
 
-
 .location {
     font-family: 'Queensides';
     text-align: center;
@@ -144,7 +143,6 @@ footer {
 footer p {
     margin: 5px 0;
 }
-
 
 @font-face {
     font-family: 'Oswald';
