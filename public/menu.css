@@ -21,7 +21,7 @@ header {
 h1 {
     justify-self: center;
     font-family: 'Qilkabold';
-    font-size: 80px;
+    font-size: 50px;
     margin: 20px;
 }
 
@@ -52,23 +52,6 @@ nav a:hover {
     transform: scale(1.1);
 }
 
-.Tittle {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    font-family: 'Palaise';
-    font-size: 18px;
-    width: 95%;
-}
-
-.homePic {
-    width: 100%;
-    height: auto;
-    max-width: 550px;
-    margin: 40px;
-    border-radius: 20px;
-}
-
 .media {
     margin-left: 40px;
 }
@@ -87,49 +70,64 @@ nav a:hover {
     transform: scale(1.1);
 }
 
-.text {
-    margin-top: 150px;
-    text-align: center;
+.menu-section {
+    padding: 50px;
+    background-color: #fff;
 }
 
-.text a {
-    display: inline-block;
-    margin: 8px;
-    color: #f43a09;
-    background-color: #ffb766;
-    text-decoration: none;
-    padding: 10px;
-    border: solid 1px rgb(2, 2, 2);
-    transition: transform 0.3s ease, background-color 0.3s ease;
+.menu-category {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
 }
 
-.text a:hover {
-    transform: scale(1.1);
-    background-color: #f43a09;
-    color: #fff;
+.image {
+    order: 1;
 }
 
-.location {
-    font-family: 'Queensides';
-    text-align: center;
-    font-size: 20px;
-    margin: 40px 0;
+
+.menu-category .image {
+    width: 40%;
+    margin: 0 20px;
 }
 
-.location iframe {
-    width: 100vw;
-    height: 450px;
-    border-radius: 0;
-    border: none;
-    margin: 0;
+.menu-category .image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.menu-category .text {
+    width: 60%;
+    font-family: 'Palaise', sans-serif;
+}
+
+.menu-category .text h2 {
+    font-size: 28px;
+    color: #ff6f61;
+    margin-bottom: 10px;
+}
+
+.menu-category .text ul {
+    list-style-type: none;
     padding: 0;
 }
 
-.location p {
-    margin-bottom: 20px;
+.menu-category .text li {
+    display: flex;
+    justify-content: space-between;
     font-size: 18px;
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
 }
 
+.menu-category .text li:last-child {
+    border-bottom: none;
+}
+
+span {
+    font-weight: bold;
+}
 footer {
     background-color: #333;
     color: white;
