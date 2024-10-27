@@ -1,3 +1,4 @@
+/* Global Styles */
 body, html {
     margin: 0;
     padding: 0;
@@ -5,6 +6,7 @@ body, html {
     overflow-x: hidden; 
 }
 
+/* Header Styles */
 header {
     display: flex;
     flex-direction: row;
@@ -25,6 +27,7 @@ h1 {
     margin: 20px;
 }
 
+/* Navigation Styles */
 nav a {
     font-family: 'Queensides';
     font-weight: bold;
@@ -43,6 +46,7 @@ nav a:hover {
     transform: scale(1.1);
 }
 
+/* Logo Styles */
 .momo-sticker {
     margin-left: 20px;
     transition: transform 0.5s ease;
@@ -52,6 +56,7 @@ nav a:hover {
     transform: scale(1.1);
 }
 
+/* Social Media Icons */
 .media {
     margin-left: 40px;
 }
@@ -70,16 +75,16 @@ nav a:hover {
     transform: scale(1.1);
 }
 
-
-.content-row{
-    font-family: 'Palaise';
+/* Content Styles */
+.content-row {
+    font-family: 'RobotoCondensed';
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     text-align: start;
 }
 
-.text-content{
+.text-content {
     width: 50%;
     margin-top: 150px;
     margin-left: 20px;
@@ -87,8 +92,7 @@ nav a:hover {
     font-size: 20px;
 }
 
-
-.text-content a, .text-content-center a{
+.text-content a, .text-content-center a {
     display: inline-block;
     margin: 8px;
     color: #f43a09;
@@ -99,19 +103,11 @@ nav a:hover {
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.text-content-center a:hover{
+.text-content a:hover, .text-content-center a:hover {
     transform: scale(1.1);
     background-color: #f43a09;
     color: #fff;
 }
-
-.text-content a:hover {
-    transform: scale(1.1);
-    background-color: #f43a09;
-    color: #fff;
-}
-
-
 
 .image-content img {
     width: 100%;
@@ -119,19 +115,23 @@ nav a:hover {
     max-width: 500px;
     margin: 40px;
     border-radius: 20px;
+    border: solid 1px #ffb766;
 }
 
-.content-center{
+/* Centered Content */
+.content-center {
     display: flex;
     flex-direction: column;
 }
 
-.text-content-center{
-    font-family: 'Palaise';
+.text-content-center {
+    font-family: 'RobotoCondensed';
     text-align: center;
     font-size: 20px;
+    margin: 20px;
 }
 
+/* Image Row Styles */
 .image-row {
     display: flex;
     justify-content: space-around;
@@ -139,25 +139,53 @@ nav a:hover {
     margin: 20px;
 }
 
-.image-row img {
-    width: 22%; /* Set width */
-    height: 250px; /* Set a fixed height */
-    object-fit: cover; /* Ensures images fill the set dimensions */
+/* Image Container with Hover Text */
+.image-container {
+    position: relative;
+    overflow: hidden;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: solid 1px #ffb766;
     transition: transform 0.3s ease;
 }
 
-.image-row img:hover{
-    transform: scale(1.1);
+.image-container img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
 }
 
+.image-container:hover {
+    transform: scale(1.05);
+}
+
+.image-text {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-family: 'Queensides';
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image-container:hover .image-text {
+    opacity: 1;
+}
+
+/* Footer Styles */
 footer {
     background-color: #333;
     color: white;
     text-align: center;
     padding: 20px 0;
-    font-family: 'Queensides';
+    font-family: 'RobotoCondensed';
     font-size: 16px;
     border-top: 4px solid #ffb766;
 }
@@ -166,27 +194,23 @@ footer p {
     margin: 5px 0;
 }
 
-@font-face {
-    font-family: 'Oswald';
-    src: url('/public/font-family/Oswald-VariableFont_wght.ttf') format('truetype');
-}
-
+/* Font Face Declarations */
 @font-face {
     font-family: 'Qilkabold';
-    src: url('/public/font-family/Qilkabold-DO6BR.otf') format('truetype');
-}
-
-@font-face {
-    font-family: 'Helvetica';
-    src: url('/public/font-family/Helvetica.ttf') format('truetype');
+    src: url('/public/font-family/Qilkabold-DO6BR.otf') format('opentype');
 }
 
 @font-face {
     font-family: 'Queensides';
-    src: url('/public/font-family/Queensides\ Regular.ttf') format('truetype');
+    src: url('/public/font-family/Queensides Regular.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Palaise';
-    src: url('/public/font-family/PalaiseblurRegularDemo-rvdB9.otf') format('truetype');
+    src: url('/public/font-family/PalaiseblurRegularDemo-rvdB9.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'RobotoCondensed';
+    src: url('/public/font-family/RobotoCondensed-VariableFont_wght.ttf') format('truetype');
 }
