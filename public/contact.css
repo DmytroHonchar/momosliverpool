@@ -99,7 +99,7 @@ h1, h2 {
 }
 
 .contact{
-    font-family: 'Queensides';
+    font-family: 'RobotoCondensed';
     border: solid 1px black;
     padding: 30px 60px;
     border-radius: 20px;
@@ -115,7 +115,7 @@ h1, h2 {
     align-items: center;
     gap: 10px;
     margin-bottom: 10px;
-    font-family: 'Queensides';
+    font-family: 'RobotoCondensed';
 }
 
 .info-item img {
@@ -130,7 +130,7 @@ form {
 }
 
 form label {
-    font-family: 'Queensides';
+    font-family: 'RobotoCondensed';
 }
 
 form input, form textarea {
@@ -138,7 +138,7 @@ form input, form textarea {
     font-size: 16px;
     border-radius: 4px;
     border: 1px solid #ccc;
-    font-family: 'Queensides';
+    font-family: 'RobotoCondensed';
 }
 
 form button {
@@ -150,7 +150,7 @@ form button {
     border-radius: 4px;
     cursor: pointer;
     transition: transform 0.3s ease, background-color 0.3s ease;
-    font-family: 'Queensides';
+    font-family: 'RobotoCondensed';
 }
 
 form button:hover {
@@ -165,7 +165,7 @@ footer {
     color: white;
     text-align: center;
     padding: 20px 0;
-    font-family: 'Queensides';
+    font-family: 'RobotoCondensed';
     font-size: 16px;
     border-top: 4px solid #ffb766;
     margin-top: auto;
@@ -189,4 +189,9 @@ footer p {
 @font-face {
     font-family: 'Palaise';
     src: url('/public/font-family/PalaiseblurRegularDemo-rvdB9.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'RobotoCondensed';
+    src: url('/public/font-family/RobotoCondensed-VariableFont_wght.ttf') format('truetype');
 }
