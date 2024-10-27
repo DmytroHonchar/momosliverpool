@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
-    <link rel="stylesheet" href="delivery.css">
+    <link rel="stylesheet" href="contact.css">
 </head>
 <body>
+    <!-- Header -->
     <div>
         <header>
             <img class="momo-sticker" src="/public/content/dumpling.gif" alt="Momo Dumpling" style="width: 50px;">
+            <!-- Navigation -->
             <nav>
                 <a href="/public/home.html">Home</a>
                 <a href="/public/about.html">About</a>
@@ -17,6 +19,7 @@
                 <a href="/public/delivery.html">Delivery</a>
                 <a href="#contact">Contact</a>
             </nav>
+            <!-- Social Media Icons -->
             <div class="media">
                 <a href="https://www.facebook.com/momosliverpool/" target="_blank">
                     <img src="/public/content/facebook-app-symbol.png" alt="Facebook" width="20px">
@@ -27,45 +30,50 @@
             </div>
         </header>
     </div>
-                <div>
-                    <h2>Info</h2>
-                    <div class="info-item">
-                        <img src="email-icon.png" alt="Email Icon"> 
-                        <p>momosIvp@gmail.com</p>
-                    </div>
-                    <div class="info-item">
-                        <img src="phone-icon.png" alt="Phone Icon"> 
-                        <p>+44 7453 955 483</p>
-                    </div>
-                    <div class="info-item">
-                        <img src="address-icon.png" alt="Address Icon"> 
-                        <p>72 Lime St, Liverpool L1 1JN</p>
-                    </div>
-                    <div class="info-item">
-                        <img src="hours-icon.png" alt="Hours Icon">
-                        <p><strong>Hours:</strong> 1:00 pm – 09:00/10:00 pm</p>
-                        <p><em>(Sunday: 1:00 pm – 9:00 pm, Monday: 1:00 pm – 9:30 pm)</em></p>
-                    </div>
-                </div>
 
-                <div>
-                    <h1>Contact Us</h1>
-                    <p>Feel free to contact us any time. We will get back to you as soon as we can!</p>
-                    <form action="#" method="post">
-                        <label for="name">Name</label>
-             |          <input type="text" id="name" name="name" required>
-    
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-    
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" required></textarea>
-    
-                        <button type="submit">Send</button>
-                    </form>
-                </div>
-    </body>
-    </html>
+    <!-- Contact Container -->
+    <div class="contact-container">
+        <!-- Info Section -->
+        <div class="info">
+            <h2>Info</h2>
+            <div class="info-item">
+                <img src="/public/content/message.png" alt="Email Icon"> 
+                <p>momosIvp@gmail.com</p>
+            </div>
+            <div class="info-item">
+                <img src="/public/content/phone.png" alt="Phone Icon"> 
+                <p>+44 7453 955 483</p>
+            </div>
+            <div class="info-item">
+                <img src="/public/content/map.png" alt="Address Icon"> 
+                <p>72 Lime St, Liverpool L1 1JN</p>
+            </div>
+            <div class="info-item">
+                <img src="/public/content/clock.png" alt="Hours Icon">
+                <p>1:00 pm – 09:00/10:00 pm</p>
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact">
+            <h1>Contact Us</h1>
+            <p>Feel free to contact us any time. We will get back to you as soon as we can.</p>
+            <form action="#" method="post">
+                <label for="name">Name</label>
+                  <input type="text" id="name" name="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
     <footer>
         <p>&copy; 2024 Momo's Restaurant, Liverpool | All rights reserved.</p>
     </footer>

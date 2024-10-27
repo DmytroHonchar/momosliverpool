@@ -1,9 +1,16 @@
 /* Global Styles */
-body, html {
+html {
+    height: 100%;
+}
+
+body {
     margin: 0;
     padding: 0;
-    width: 100%;
-    overflow-x: hidden; 
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-x: hidden;
 }
 
 /* Header Styles */
@@ -12,7 +19,7 @@ header {
     flex-direction: row;
     justify-content: space-between;
     padding: 10px;
-    width: 100%; 
+    width: 100%;
     box-sizing: border-box;
     border-radius: 6px;
     text-align: center;
@@ -69,20 +76,88 @@ nav a:hover {
 }
 
 /* Headings */
-h1 {
-    justify-self: center;
+h1, h2 {
     font-family: 'Qilkabold';
     margin: 20px;
 }
 
-h2 {
-    justify-self: center;
-    font-family: 'Qilkabold';
-    margin: 20px;
+/* Contact Container */
+.contact-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    flex: 1;
 }
 
+.info, .contact {
+    width: 100%;
+    box-sizing: border-box;
+}
 
+.contact{
+    font-family: 'Queensides';
+    border: solid 1px black;
+    padding: 30px 60px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.info{
+    margin-top: 50px;
+}
 
+/* Info Section */
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-family: 'Queensides';
+}
+
+.info-item img {
+    width: 25px;
+}
+
+/* Contact Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form label {
+    font-family: 'Queensides';
+}
+
+form input, form textarea {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-family: 'Queensides';
+}
+
+form button {
+    padding: 8px 20px;
+    font-size: 18px;
+    color: #f43a09;
+    background-color: #ffb766;
+    border: solid 1px rgb(2, 2, 2);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    font-family: 'Queensides';
+}
+
+form button:hover {
+    background-color: #f43a09;
+    color: white;
+    transform: scale(1.1);
+}
 
 /* Footer Styles */
 footer {
@@ -93,6 +168,7 @@ footer {
     font-family: 'Queensides';
     font-size: 16px;
     border-top: 4px solid #ffb766;
+    margin-top: auto;
 }
 
 footer p {
