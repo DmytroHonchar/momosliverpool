@@ -592,4 +592,13 @@ body.no-scroll {
 }
 
 
+@media (min-width: 1536px) {
+    .content-row{
+        margin: 20px 200px;
+    }
 
+    .image-row {
+        margin: 40px 200px;
+    }
+
+}
