@@ -7,18 +7,23 @@
     <link rel="stylesheet" href="menu.css">
 </head>
 <body>
-    <!-- Header -->
+        <!-- Header Section -->
     <header>
+        <!-- Logo (Hidden on small screens) -->
         <a href="/public/delivery.html" class="hidden-link">
             <img class="momo-sticker" src="/public/content/dumplings (1).png" alt="Momo Dumpling" style="width: 50px;">
         </a>
+
+        <!-- Navigation Links (Hidden on small screens) -->
         <nav>
-            <a href="/public/Home.html">Home</a>
+            <a href="/public/home.html">Home</a>
             <a href="/public/about.html">About</a>
             <a href="/public/menu.html">Menu</a>
             <a href="/public/delivery.html">Delivery</a>
             <a href="/public/contact.html">Contact</a>
         </nav>
+
+        <!-- Social Media Icons -->
         <div class="media">
             <a href="https://www.facebook.com/momosliverpool/" target="_blank">
                 <img src="/public/content/facebook-app-symbol.png" alt="Facebook" width="20px">
@@ -27,7 +32,24 @@
                 <img src="/public/content/instagram.png" alt="Instagram" width="20px">
             </a>
         </div>
+
+        <!-- Menu Icon (Visible on small screens) -->
+        <div class="menu-icon" onclick="toggleNav()">
+            <img src="/public/content/more.png" alt="More" width="24px">
+        </div>
     </header>
+
+    <!-- Navigation Overlay (Hidden by default) -->
+    <div class="nav-overlay">
+        <span class="close-btn" onclick="toggleNav()">×</span>
+        <nav>
+            <a href="/public/home.html">Home</a>
+            <a href="/public/about.html">About</a>
+            <a href="/public/menu.html">Menu</a>
+            <a href="/public/delivery.html">Delivery</a>
+            <a href="/public/contact.html">Contact</a>
+        </nav>
+    </div>
 
     <h1>Menu</h1>
 
@@ -106,5 +128,8 @@
     <footer>
         <p>&copy; 2024 Momo's Restaurant, Liverpool | All rights reserved.</p>
     </footer>
+
+    <!-- External JavaScript File -->
+<script src="/src/script.js"></script>
 </body>
 </html>

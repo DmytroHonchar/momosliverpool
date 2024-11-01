@@ -134,7 +134,8 @@ h1 {
     font-size: 20px;
     padding: 10px 0;
     border-bottom: 1px solid #e0e0e0;
-    width: 400px;
+    width: 350px;
+    margin-left: 10px;
 }
 
 .menu-category .text li:last-child {
@@ -148,6 +149,65 @@ h1 {
 .image img{
     border: solid 1px #ffb766;
 }
+
+/* Navigation Overlay Styles */
+.nav-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 1); /* Full opacity */
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    overflow-y: hidden;
+}
+
+/* Active Overlay: Slide-in Animation */
+.nav-overlay.active {
+    display: flex;
+    animation: slideIn 0.5s forwards;
+}
+
+/* Inactive Overlay: Slide-out Animation */
+.nav-overlay.inactive {
+    animation: slideOut 0.5s forwards;
+    display: flex;
+}
+
+.nav-overlay nav {
+    text-align: center;
+}
+
+.nav-overlay nav a {
+    display: block;
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    margin: 15px 0;
+    transition: color 0.3s ease;
+}
+
+.nav-overlay nav a:hover {
+    color: #ffb766;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 32px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Disable scrolling on the main page when nav-overlay is active */
+body.no-scroll {
+    overflow: hidden;
+}
+
 
 /* Footer Styles */
 footer {
@@ -195,4 +255,231 @@ footer p {
 @font-face {
     font-family: 'RobotoCondensed';
     src: url('/public/font-family/RobotoCondensed-VariableFont_wght.ttf') format('truetype');
+}
+
+
+/* Menu Icon Styles */
+.menu-icon {
+    display: none;
+}
+
+/* Slide-in and Slide-out Animations for nav-overlay */
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
+/* Navigation Overlay Styles */
+.nav-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 1); /* Full opacity */
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    overflow-y: hidden;
+}
+
+/* Active Overlay: Slide-in Animation */
+.nav-overlay.active {
+    display: flex;
+    animation: slideIn 0.5s forwards;
+}
+
+/* Inactive Overlay: Slide-out Animation */
+.nav-overlay.inactive {
+    animation: slideOut 0.5s forwards;
+    display: flex;
+}
+
+.nav-overlay nav {
+    text-align: center;
+}
+
+.nav-overlay nav a {
+    display: block;
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    margin: 15px 0;
+    transition: color 0.3s ease;
+}
+
+.nav-overlay nav a:hover {
+    color: #ffb766;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 32px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Disable scrolling on the main page when nav-overlay is active */
+body.no-scroll {
+    overflow: hidden;
+}
+
+
+/* Mobile Devices */
+@media (max-width: 767px) {
+    header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    header > nav {
+        display: none;
+    }
+
+    header .momo-sticker {
+        display: none;
+    }
+
+    .media {
+        order: -1;
+        margin-left: 10px;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .menu-icon {
+        display: block;
+        transition: transform 0.3s ease;
+        cursor: pointer;
+        margin-right: 20px;
+    }
+
+    .menu-icon:hover {
+        transform: scale(1.1);
+    }
+
+    .menu-category {
+        display: flex;
+        flex-direction: column;
+        text-align:center;
+    }
+ 
+    .menu-category img {
+        width: 80%; 
+        height: auto; 
+        max-width: 420px; 
+        margin: 0;
+    }
+ 
+    .menu-category.reverse {
+        flex-direction: column;
+    }
+
+}
+
+
+
+/* Tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+    header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    /* Hide the main navigation links in the header */
+    header > nav {
+        display: none;
+    }
+
+    /* Hide the logo for a simpler layout */
+    header .momo-sticker {
+        display: none;
+    }
+
+    /* Adjust social media icons and menu icon */
+    .media {
+        order: -1;
+        margin-left: 10px;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    /* Display the menu icon */
+    .menu-icon {
+        display: block;
+        transition: transform 0.3s ease;
+        cursor: pointer;
+        margin-right: 20px;
+    }
+
+    .menu-icon:hover {
+        transform: scale(1.1);
+    }   
+}
+
+
+@media (min-width: 768px) and (max-width: 963px){
+    /* Center image in menu-category and make images uniform in size */
+    .menu-category {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+       text-align: center;
+   }
+
+   .menu-category img {
+       width: 80%; 
+       height: auto; 
+       max-width: 420px; 
+       margin: 0;
+   }
+
+   .menu-category.reverse {
+       flex-direction: column;
+   }
+}
+
+
+
+
+@media (min-width: 1117px) {
+    .menu-category {
+        max-width: 1000px; /* Keep items centered within this width */
+        margin: 40px auto; /* Center align the .menu-category */
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center; /* Center items horizontally */
+    }
+
+    .menu-category .text {
+        margin-right: 0px; /* Increase space between text and image */
+    }
+
+    .menu-category img {
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+    }
 }
