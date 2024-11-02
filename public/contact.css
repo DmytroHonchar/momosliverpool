@@ -1,16 +1,12 @@
 /* Global Styles */
-html {
-    height: 100%;
-}
-
-body {
+body, html {
     margin: 0;
     padding: 0;
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    width: 100%;
+    height: 100%;
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column; 
 }
 
 /* Header Styles */
@@ -104,6 +100,7 @@ h1, h2 {
     padding: 30px 60px;
     border-radius: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: fit-content;
 }
 .info{
     margin-top: 50px;
@@ -194,4 +191,201 @@ footer p {
 @font-face {
     font-family: 'RobotoCondensed';
     src: url('/public/font-family/RobotoCondensed-VariableFont_wght.ttf') format('truetype');
+}
+
+/* Menu Icon Styles */
+.menu-icon {
+    display: none;
+}
+
+/* Slide-in and Slide-out Animations for nav-overlay */
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
+/* Navigation Overlay Styles */
+.nav-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 1); /* Full opacity */
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    overflow-y: hidden;
+}
+
+/* Active Overlay: Slide-in Animation */
+.nav-overlay.active {
+    display: flex;
+    animation: slideIn 0.5s forwards;
+}
+
+/* Inactive Overlay: Slide-out Animation */
+.nav-overlay.inactive {
+    animation: slideOut 0.5s forwards;
+    display: flex;
+}
+
+.nav-overlay nav {
+    text-align: center;
+}
+
+.nav-overlay nav a {
+    display: block;
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    margin: 15px 0;
+    transition: color 0.3s ease;
+}
+
+.nav-overlay nav a:hover {
+    color: #ffb766;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 32px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Disable scrolling on the main page when nav-overlay is active */
+body.no-scroll {
+    overflow: hidden;
+}
+
+
+/* Mobile Devices */
+@media (max-width: 767px) {
+    header {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    header > nav {
+        display: none;
+    }
+
+    header .momo-sticker {
+        display: none;
+    }
+
+    .media {
+        order: -1;
+        margin-left: 10px;
+        flex-direction: row-reverse;
+    }
+
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+        margin-right: 20px;
+    }
+
+    h1{
+        margin-bottom: 5px;
+    }
+
+    h2{
+        margin-top: 2px;
+        align-self: center;
+    }
+
+    .contact-container{
+        flex-direction: column;
+    }
+
+    .contact{
+        order: -1;
+    }
+
+    .info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* Align items to the left within the container */
+        margin: 0 auto; /* Center the .info container horizontally */
+        width: 100%;
+        max-width: 250px; /* Control width of the .info section */
+    }
+
+    .info-item {
+        display: flex;
+        align-items: center;
+        gap: 10px; /* Space between icon and text */
+        text-align: left;
+    }
+    
+}
+
+    
+@media (min-width: 768px) and (max-width: 1024px) {
+    header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    /* Hide the main navigation links in the header */
+    header > nav {
+        display: none;
+    }
+
+    /* Hide the logo for a simpler layout */
+    header .momo-sticker {
+        display: none;
+    }
+
+    /* Adjust social media icons and menu icon */
+    .media {
+        order: -1;
+        margin-left: 10px;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    /* Display the menu icon */
+    .menu-icon {
+        display: block;
+        transition: transform 0.3s ease;
+        cursor: pointer;
+        margin-right: 20px;
+    }
+
+    .menu-icon:hover {
+        transform: scale(1.1);
+    }
+
+}
+
+
+@media (max-width: 767px) and (min-width: 412px) {
+    .contact {
+        padding: 25px 50px; /* Slightly increase padding */
+        font-size: 15px; /* Adjust font size for better readability */
+        max-width: 350px; /* Increase max-width */
+        margin: 0 auto; /* Center the contact section */
+    }
 }
