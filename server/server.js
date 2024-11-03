@@ -20,6 +20,19 @@ app.use(helmet());
 app.use(express.static(path.join(__dirname, '..', 'public')));
 app.use('/src', express.static(path.join(__dirname, '..', 'src')));
 
+app.use(
+    helmet.contentSecurityPolicy({
+        directives: {
+            defaultSrc: ["'self'", 'https://www.google.com', 'https://maps.googleapis.com'],
+            scriptSrc: ["'self'", 'https://maps.googleapis.com'],
+            frameSrc: ["'self'", 'https://www.google.com', 'https://maps.googleapis.com', 'https://www.google.com/maps/embed/'],
+            imgSrc: ["'self'", 'https://maps.gstatic.com', 'https://maps.googleapis.com'],
+            styleSrc: ["'self'", "'unsafe-inline'", 'https://fonts.googleapis.com', 'https://maps.googleapis.com'],
+            fontSrc: ["'self'", 'https://fonts.gstatic.com'],
+        },
+    })
+);
+
 // Nodemailer configuration
 const transporter = nodemailer.createTransport({
     service: 'Gmail',
@@ -37,20 +50,21 @@ app.post('/contact', async (req, res) => {
         return res.status(400).send('All fields are required');
     }
 
+    
     const mailOptions = {
-        from: process.env.EMAIL_USER, // Your Gmail address
-        to: process.env.EMAIL_USER,   // Your email address to receive the message
-        replyTo: email,               // User's email address
+        from: process.env.EMAIL_USER,
+        to: process.env.EMAIL_USER,
+        replyTo: email,
         subject: 'New Contact Form Submission',
         text: `You have a new message from ${name} (${email}):\n\n${message}`
     };
 
     try {
         await transporter.sendMail(mailOptions);
-        res.status(200).send('Message sent successfully');
+        res.status(200).json({ success: true, message: 'Message sent successfully' });
     } catch (error) {
         console.error('Error sending email:', error);
-        res.status(500).send('Internal Server Error');
+        res.status(500).json({ success: false, message: 'Failed to send message' });
     }
 });
 
