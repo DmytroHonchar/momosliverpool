@@ -149,26 +149,26 @@ footer p {
     margin: 5px 0;
 }
 
-/* Font-face Declarations */
 @font-face {
     font-family: 'Qilkabold';
-    src: url('/public/font-family/Qilkabold-DO6BR.otf') format('opentype');
+    src: url('/font-family/Qilkabold-DO6BR.otf') format('opentype');
 }
 
 @font-face {
     font-family: 'Queensides';
-    src: url('/public/font-family/Queensides Regular.ttf') format('truetype');
+    src: url('/font-family/Queensides Regular.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Palaise';
-    src: url('/public/font-family/PalaiseblurRegularDemo-rvdB9.otf') format('opentype');
+    src: url('/font-family/PalaiseblurRegularDemo-rvdB9.otf') format('opentype');
 }
 
 @font-face {
     font-family: 'RobotoCondensed';
-    src: url('/public/font-family/RobotoCondensed-VariableFont_wght.ttf') format('truetype');
+    src: url('/font-family/RobotoCondensed-VariableFont_wght.ttf') format('truetype');
 }
+
 
 /* Menu Icon Styles */
 .menu-icon {

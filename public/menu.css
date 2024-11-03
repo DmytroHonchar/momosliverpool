@@ -169,35 +169,30 @@ footer p {
 
 /* Font Faces */
 @font-face {
-    font-family: 'Oswald';
-    src: url('/public/font-family/Oswald-VariableFont_wght.ttf') format('truetype');
-}
-
-@font-face {
     font-family: 'Qilkabold';
-    src: url('/public/font-family/Qilkabold-DO6BR.otf') format('opentype');
+    src: url('/font-family/Qilkabold-DO6BR.otf') format('opentype');
 }
 
 @font-face {
     font-family: 'Helvetica';
-    src: url('/public/font-family/Helvetica.ttf') format('truetype');
+    src: url('/font-family/Helvetica.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Queensides';
-    src: url('/public/font-family/Queensides Regular.ttf') format('truetype');
+    src: url('/font-family/Queensides Regular.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Palaise';
-    src: url('/public/font-family/PalaiseblurRegularDemo-rvdB9.otf') format('opentype');
+    src: url('/font-family/PalaiseblurRegularDemo-rvdB9.otf') format('opentype');
 }
 
 
 
 @font-face {
     font-family: 'RobotoCondensed';
-    src: url('/public/font-family/RobotoCondensed-VariableFont_wght.ttf') format('truetype');
+    src: url('/font-family/RobotoCondensed-VariableFont_wght.ttf') format('truetype');
 }
 
 

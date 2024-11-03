@@ -7,42 +7,49 @@
     <link rel="stylesheet" href="delivery.css">
 </head>
 <body>
-    <div>
-        <!-- Header Section -->
-        <header>
-            <a href="/public/delivery.html" class="hidden-link">
-                <img class="momo-sticker" src="/public/content/dumplings (1).png" alt="Momo Dumpling" style="width: 50px;">
-            </a>
-            <nav>
-                <a href="/public/home.html">Home</a>
-                <a href="/public/about.html">About</a>
-                <a href="/public/menu.html">Menu</a>
-                <a href="/public/delivery.html">Delivery</a>
-                <a href="/public/contact.html">Contact</a>
-            </nav>
-            <div class="media">
-                <a href="https://www.facebook.com/momosliverpool/" target="_blank">
-                    <img src="/public/content/facebook-app-symbol.png" alt="Facebook" width="20px">
-                </a>
-                <a href="https://www.instagram.com/momosliverpool/" target="_blank">
-                    <img src="/public/content/instagram.png" alt="Instagram" width="20px">
-                </a>
-            </div>
-            <div class="menu-icon" onclick="toggleNav()">
-                <img src="/public/content/more.png" alt="More" width="24px">
-            </div>
-        </header>
+    <!-- Header Section -->
+    <header>
+        <!-- Logo (Hidden on small screens) -->
+        <a href="/delivery" class="hidden-link">
+            <img class="momo-sticker" src="/content/dumplings (1).png" alt="Momo Dumpling" style="width: 50px;">
+        </a>
 
-        <div class="nav-overlay">
-            <span class="close-btn" onclick="toggleNav()">×</span>
-            <nav>
-                <a href="/public/home.html">Home</a>
-                <a href="/public/about.html">About</a>
-                <a href="/public/menu.html">Menu</a>
-                <a href="/public/delivery.html">Delivery</a>
-                <a href="/public/contact.html">Contact</a>
-            </nav>
+        <!-- Navigation Links (Hidden on small screens) -->
+        <nav>
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/menu">Menu</a>
+            <a href="/delivery">Delivery</a>
+            <a href="/contact">Contact</a>
+        </nav>
+
+        <!-- Social Media Icons -->
+        <div class="media">
+            <a href="https://www.facebook.com/momosliverpool/" target="_blank">
+                <img src="/content/facebook-app-symbol.png" alt="Facebook" width="20px">
+            </a>
+            <a href="https://www.instagram.com/momosliverpool/" target="_blank">
+                <img src="/content/instagram.png" alt="Instagram" width="20px">
+            </a>
         </div>
+
+        <!-- Menu Icon (Visible on small screens) -->
+        <div class="menu-icon"">
+            <img src="/content/more.png" alt="More" width="24px">
+        </div>
+    </header>
+
+    <!-- Navigation Overlay (Hidden by default) -->
+    <div class="nav-overlay">
+        <span class="close-btn">×</span>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/menu">Menu</a>
+            <a href="/delivery">Delivery</a>
+            <a href="/contact">Contact</a>
+        </nav>
+    </div>
 
     <div class="delivery-row">
         <!-- Order Now Section -->
@@ -50,10 +57,10 @@
             <h1>Order Now</h1>
             <div class="links">
                 <a href="https://www.ubereats.com/gb/store/momos/937HhxMDXqOIlWUYHxx0aQ" target="_blank" class="link-card">
-                    <img src="/public/content/uber.png" alt="UberEats" id="Uber">
+                    <img src="/content/uber.png" alt="UberEats" id="Uber">
                 </a>
                 <a href="https://deliveroo.co.uk/menu/liverpool/liverpool-city-centre/momos-lime-street" target="_blank" class="link-card">
-                    <img src="/public/content/deliveroo.png" alt="Deliveroo" id="Deliveroo">
+                    <img src="/content/deliveroo.png" alt="Deliveroo" id="Deliveroo">
                 </a>
             </div>
         </div>
@@ -63,7 +70,7 @@
             <h2>Prefer to Pick Up?</h2>
             <p>Your order will be ready in just 15 minutes</p>
             <a href="https://www.foodbooking.com/ordering/restaurant/menu?company_uid=db6662df-a039-44a9-860a-6283eafbc9cf&restaurant_uid=7a8565fd-5f6b-4372-a6e3-ddcced168119&facebook=true" target="_blank" class="pickup-link-card">
-                <img src="/public/content/dumpling.png" alt="Order for Pick-Up">
+                <img src="/content/dumpling.png" alt="Order for Pick-Up">
                 <span>Momo's</span>
             </a>
         </section>
@@ -74,19 +81,19 @@
         <p>Traditional flavors prepared with care and creativity.</p>
         <div class="right-images">
             <div class="image-container">
-                <img src="/public/content/dish1.jpg" alt="Dish 1">
+                <img src="/content/dish1.jpg" alt="Dish 1">
                 <span class="image-text">Samosa</span>
             </div>
             <div class="image-container">
-                <img src="/public/content/dish3.jpg" alt="Dish 2">
+                <img src="/content/dish3.jpg" alt="Dish 2">
                 <span class="image-text">Chilli Momos</span>
             </div>
             <div class="image-container">
-                <img src="/public/content/dish4.jpg" alt="Dish 3">
+                <img src="/content/dish4.jpg" alt="Dish 3">
                 <span class="image-text">Momos</span>
             </div>
             <div class="image-container">
-                <img src="/public/content/dish2.jpg" alt="Dish 4">
+                <img src="/content/dish2.jpg" alt="Dish 4">
                 <span class="image-text">Chilli Chips</span>
             </div>
         </div>
