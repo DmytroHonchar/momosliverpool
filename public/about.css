@@ -25,6 +25,7 @@ h1 {
     font-family: 'Qilkabold';
     font-size: 50px;
     margin: 20px;
+    align-items: center;
 }
 
 /* Navigation Styles */
@@ -313,6 +314,10 @@ body.no-scroll {
 
     header .momo-sticker {
         display: none;
+    }
+
+    h1{
+        align-items: center;
     }
 
     .media {

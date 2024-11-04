@@ -89,6 +89,7 @@ h1 {
     font-family: 'Qilkabold';
     font-size: 80px;
     margin: 20px;
+    align-items: center;
 }
 
 .text {
@@ -268,6 +269,10 @@ body.no-scroll {
 
     header .momo-sticker {
         display: none;
+    }
+
+    h1{
+        align-items: center;
     }
 
     .media {
