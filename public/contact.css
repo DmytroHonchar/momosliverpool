@@ -83,7 +83,7 @@ h1, h2 {
     flex-direction: row;
     gap: 20px;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 30px auto;
     padding: 20px;
     box-sizing: border-box;
     flex: 1;
