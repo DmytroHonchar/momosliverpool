@@ -21,10 +21,12 @@ header {
 }
 
 h1 {
-    justify-self: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
     font-family: 'Qilkabold';
     font-size: 50px;
-    margin: 20px;
+    margin: 20px auto; 
     align-items: center;
 }
 
@@ -316,8 +318,9 @@ body.no-scroll {
         display: none;
     }
 
-    h1{
-        align-items: center;
+    h1 {
+        font-size: 50px; 
+        margin: 10px auto;
     }
 
     .media {
