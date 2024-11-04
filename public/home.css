@@ -275,7 +275,7 @@ body.no-scroll {
 
     h1 {
         font-size: 60px; 
-        margin: 10px auto;
+        margin: 20px auto;
     }
 
     .media {
@@ -340,6 +340,11 @@ body.no-scroll {
         display: none;
     }
 
+    h1 {
+        font-size: 60px; 
+        margin: 20px auto;
+    }
+    
     /* Adjust social media icons and menu icon */
     .media {
         order: -1;
