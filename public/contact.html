@@ -92,6 +92,13 @@
                 <label for="message">Message</label>
                 <textarea id="message" name="message" required></textarea>
 
+                <!-- Honeypot field (hidden from users) -->
+                <div style="display: none;">
+                    <label for="phone">Phone</label>
+                    <input type="text" id="phone" name="phone">
+                </div>
+
+
                 <button type="submit">Send</button>
                 <p id="message-status" class="hidden"></p>
             </form>

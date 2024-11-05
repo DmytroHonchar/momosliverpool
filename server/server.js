@@ -5,6 +5,8 @@ const path = require('path');
 const nodemailer = require('nodemailer');
 const cors = require('cors');
 const helmet = require('helmet');
+const validator = require('validator');
+const rateLimit = require('express-rate-limit');
 
 
 const app = express();
@@ -42,21 +44,52 @@ const transporter = nodemailer.createTransport({
     },
 });
 
-// Contact form endpoint
-app.post('/contact', async (req, res) => {
-    const { name, email, message } = req.body;
 
+// Rate limiting for contact form submissions only
+const contactFormLimiter = rateLimit({
+    windowMs: 15 * 60 * 1000, // 15 minutes
+    max: 5, // Limit each IP to 5 requests per windowMs
+    message: 'Too many submissions from this IP, please try again after 15 minutes.',
+    standardHeaders: true,
+    legacyHeaders: false,
+});
+
+// Serve the contact form page (GET request) without rate limiting
+app.get('/contact', (req, res) => {
+    res.sendFile(path.join(__dirname, '..', 'public', 'contact.html'));
+});
+
+// Handle contact form submissions (POST request) with rate limiting
+app.post('/contact', contactFormLimiter, async (req, res) => {
+    let { name, email, message, phone } = req.body;
+
+    // Honeypot check
+    if (phone) {
+        console.log('Bot detected through honeypot field.');
+        return res.status(400).send('Bot detected. Submission rejected.');
+    }
+
+    // Check if all fields are present
     if (!name || !email || !message) {
         return res.status(400).send('All fields are required');
     }
 
-    
+    // Sanitize inputs
+    name = validator.escape(name.trim());
+    email = validator.normalizeEmail(email.trim());
+    message = validator.escape(message.trim());
+
+    // Validate email
+    if (!validator.isEmail(email)) {
+        return res.status(400).send('Invalid email address');
+    }
+
     const mailOptions = {
         from: process.env.EMAIL_USER,
         to: process.env.EMAIL_USER,
         replyTo: email,
         subject: 'New Contact Form Submission',
-        text: `You have a new message from ${name} (${email}):\n\n${message}`
+        text: `You have a new message from ${name} (${email}):\n\n${message}`,
     };
 
     try {
@@ -68,12 +101,10 @@ app.post('/contact', async (req, res) => {
     }
 });
 
-
-// Serve HTML files
+// Serve other HTML files
 app.get('/', (req, res) => res.sendFile(path.join(__dirname, '..', 'public', 'home.html')));
 app.get('/about', (req, res) => res.sendFile(path.join(__dirname, '..', 'public', 'about.html')));
 app.get('/menu', (req, res) => res.sendFile(path.join(__dirname, '..', 'public', 'menu.html')));
 app.get('/delivery', (req, res) => res.sendFile(path.join(__dirname, '..', 'public', 'delivery.html')));
-app.get('/contact', (req, res) => res.sendFile(path.join(__dirname, '..', 'public', 'contact.html')));
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
