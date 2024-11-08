@@ -59,6 +59,8 @@ nav a:hover {
 /* Social Media Icons */
 .media {
     margin-left: 40px;
+    display: flex;
+    align-items: center;
 }
 
 .media a {
