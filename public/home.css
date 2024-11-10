@@ -4,6 +4,9 @@ body, html {
     padding: 0;
     width: 100%;
     overflow-x: hidden;
+    min-height: 100vh;           /* Ensure the body is at least the height of the viewport */
+    display: flex;               /* Enable Flexbox on the body */
+    flex-direction: column;      /* Arrange children vertically */
 }
 
 img {
@@ -183,6 +186,7 @@ footer {
     font-family: 'RobotoCondensed', sans-serif;
     font-size: 16px;
     border-top: 4px solid #ffb766;
+    margin-top: auto;
 }
 
 footer p {
