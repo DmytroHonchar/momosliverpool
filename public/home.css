@@ -325,14 +325,14 @@ body.no-scroll {
     }
 
     .hero-section {
-        background-image: url('/content/momo_org.jpg');
         max-width: 90%;
         margin: 20px auto;
         padding: 0;
-        background-size: cover;
+        background-size: 100% auto; /* This will make the image width match the container while maintaining aspect ratio */
         background-position: center;
         background-repeat: no-repeat;
         height: 350px;
+        background-attachment: scroll;
     }
 
     .hero-text h1 {
