@@ -78,8 +78,8 @@ nav a:hover {
 .hero-section {
     position: relative;
     width: 100%;
-    max-width: 1050px;
-    height: 550px;
+    max-width: 900px;
+    height: 450px;
     margin: 30px auto;
     display: flex;
     align-items: center;
