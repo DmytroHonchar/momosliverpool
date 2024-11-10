@@ -24,16 +24,21 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Scroll Effect for Hero Background
-    window.addEventListener("scroll", function() {
+    window.addEventListener("scroll", function () {
         const scrollPosition = window.scrollY;
         const heroBackground = document.querySelector(".hero-background");
-
+    
         if (heroBackground) {
-            const maxParallax = 20;
-            const parallaxAmount = Math.min(scrollPosition * 0.15, maxParallax);
-            
-            // Only apply translateY for the parallax effect, no scaling
-            heroBackground.style.transform = `scale(1.1) translateY(${parallaxAmount}px)`;
+            const maxParallax = 80; // Vertical parallax distance
+            const verticalParallax = Math.min(scrollPosition * 0.1, maxParallax);
+            const scaleAmount = 1.1 - scrollPosition * 0.0001; // Subtle zoom-out
+            const brightness = 1 + Math.min(scrollPosition * 0.0005, 0.1); // Slight increase in brightness
+            const contrast = 1 + Math.min(scrollPosition * 0.0003, 0.05); // Slight increase in contrast
+    
+            requestAnimationFrame(() => {
+                heroBackground.style.transform = `scale(${scaleAmount}) translateY(${verticalParallax}px)`;
+                heroBackground.style.filter = `brightness(${brightness}) contrast(${contrast})`;
+            });
         }
     });
 

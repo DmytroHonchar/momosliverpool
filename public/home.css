@@ -100,6 +100,7 @@ nav a:hover {
     background-position: center;
     z-index: -2;
     transform: scale(1.1); /* Slightly larger to prevent white edges during parallax */
+    transition: transform 0.2s ease-out, filter 0.2s ease-out;
 }
 
 .hero-overlay {
