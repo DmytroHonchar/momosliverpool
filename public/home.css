@@ -11,19 +11,6 @@ img {
     height: auto;
 }
 
-/* header {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    padding: 10px 30px;
-    box-sizing: border-box;
-    z-index: 2;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.9); 
-} */
-
 header {
     display: flex;
     flex-direction: row;
@@ -88,18 +75,28 @@ nav a:hover {
 .hero-section {
     position: relative;
     width: 100%;
-    max-width: 1050px; /* Restrict the width to keep it centered */
-    height: 450px;
-    margin: 30px auto; /* Center the section horizontally */
-    background-image: url('/content/WhatsApp\ Image\ 2024-11-08\ at\ 17.26.50\ \(2\).jpeg'); /* Replace with your background image path */
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed; /* Parallax effect */
+    max-width: 1050px;
+    height: 550px;
+    margin: 30px auto;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 10px;
+    overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/content/WhatsApp Image 2024-11-08 at 17.26.50 (2).jpeg');
+    background-size: cover;
+    background-position: center;
+    z-index: -2;
+    transform: scale(1.2); /* Slightly larger to prevent white edges during parallax */
 }
 
 .hero-overlay {
@@ -110,6 +107,7 @@ nav a:hover {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.6); 
     border-radius: 10px;
+    z-index: -1;
 }
 
 .hero-text {
@@ -118,7 +116,6 @@ nav a:hover {
     text-align: center;
     max-width: 800px;
     padding: 0 20px;
-    z-index: 1; /* Ensure text is above overlay */
 }
 
 .hero-text img {
@@ -157,7 +154,6 @@ nav a:hover {
     background-color: #f43a09;
     color: #fff;
 }
-
 
 .location {
     font-family: 'RobotoCondensed', sans-serif;
@@ -292,7 +288,6 @@ body.no-scroll {
 }
 
 /* Mobile Devices */
-
 @media (max-width: 767px) {
     header {
         padding: 10px 20px;
@@ -327,40 +322,50 @@ body.no-scroll {
     .hero-section {
         max-width: 90%;
         margin: 20px auto;
-        padding: 0;
-        background-size: 100% auto; /* This will make the image width match the container while maintaining aspect ratio */
-        background-position: center;
-        background-repeat: no-repeat;
         height: 350px;
-        background-attachment: scroll;
+    }
+
+    .hero-background {
+        transform: scale(1.1); /* Reduced scale for mobile */
+    }
+
+    /* Adjust the content spacing */
+    .hero-text {
+        padding: 20px;
+        max-width: 100%;
+    }
+
+    .hero-text img {
+        width: 70%;
+        max-width: 200px;
+        margin-bottom: 15px;
     }
 
     .hero-text h1 {
-        font-size: 28px;
+        font-size: 24px;
+        margin-bottom: 15px;
     }
 
     .hero-text p {
         font-size: 14px;
+        margin-bottom: 20px;
+        line-height: 1.4;
     }
 
-    .hero-text img {
-        width: 90%;
-        max-width: 250px;
-        height: auto;
-    }
-
-    .hero-text {
-        max-width: 90%;
-        padding: 0 10px;
+    .hero-text .button {
+        padding: 12px 25px;
+        font-size: 16px;
     }
 
     .location iframe {
         width: 100%;
         height: 300px;
     }
+
+    .location p{
+        margin: 5px 10px;
+    }
 }
-
-
 
 /* Tablets */
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -394,17 +399,47 @@ body.no-scroll {
         transform: scale(1.1);
     }
 
-    /* Adjust hero text for tablet screens */
+    .hero-section {
+        max-width: 90%;
+        height: 450px;
+    }
+
+    .hero-background {
+        transform: scale(1.15); /* Medium scale for tablets */
+    }
+
+    .hero-text {
+        max-width: 70%;
+    }
+
     .hero-text h1 {
-        font-size: 40px;
+        font-size: 42px;
     }
 
     .hero-text p {
-        font-size: 18px;
+        font-size: 17px;
     }
 
     .location iframe {
         width: 100%;
-        height: 300px;
+        height: 400px;
+    }
+}
+
+/* Extra large screens (above 1366px) */
+@media (min-width: 1367px) {
+    .hero-section {
+        max-width: 1150px;
+        height: 550px;
+    }
+
+    .hero-text {
+        max-width: 800px;
+    }
+
+    .location iframe {
+        width: 100%;
+        max-width: 1400px;
+
     }
 }
