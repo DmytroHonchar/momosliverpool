@@ -27,24 +27,13 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("scroll", function() {
         const scrollPosition = window.scrollY;
         const heroBackground = document.querySelector(".hero-background");
-        
+
         if (heroBackground) {
-            // Limit the parallax effect
-            const maxParallax = 50; // Maximum pixels to move
-            const parallaxAmount = Math.min(scrollPosition * 0.3, maxParallax);
+            const maxParallax = 20;
+            const parallaxAmount = Math.min(scrollPosition * 0.15, maxParallax);
             
-            // For mobile
-            if (window.innerWidth <= 767) {
-                heroBackground.style.transform = `scale(1.1) translateY(${parallaxAmount}px)`;
-            }
-            // For tablets
-            else if (window.innerWidth <= 1024) {
-                heroBackground.style.transform = `scale(1.15) translateY(${parallaxAmount}px)`;
-            }
-            // For desktops
-            else {
-                heroBackground.style.transform = `scale(1.2) translateY(${parallaxAmount}px)`;
-            }
+            // Only apply translateY for the parallax effect, no scaling
+            heroBackground.style.transform = `scale(1.1) translateY(${parallaxAmount}px)`;
         }
     });
 
