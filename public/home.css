@@ -166,6 +166,10 @@ nav a:hover {
     margin: 40px 0;
 }
 
+.location h2{
+    font-family: 'Qilkabold';
+}
+
 .location iframe {
     width: 100vw;
     height: 450px;
