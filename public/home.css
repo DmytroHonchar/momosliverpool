@@ -4,9 +4,9 @@ body, html {
     padding: 0;
     width: 100%;
     overflow-x: hidden;
-    min-height: 100vh;           /* Ensure the body is at least the height of the viewport */
-    display: flex;               /* Enable Flexbox on the body */
-    flex-direction: column;      /* Arrange children vertically */
+    min-height: 100vh;           
+    display: flex;               
+    flex-direction: column;      
 }
 
 img {
@@ -99,7 +99,7 @@ nav a:hover {
     background-size: cover;
     background-position: center;
     z-index: -2;
-    transform: scale(1.1); /* Slightly larger to prevent white edges during parallax */
+    transform: scale(1.1); 
     transition: transform 0.2s ease-out, filter 0.2s ease-out;
 }
 
