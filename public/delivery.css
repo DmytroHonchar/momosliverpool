@@ -9,8 +9,6 @@ body, html {
     flex-direction: column; 
 }
 
-
-
 /* Header Styles */
 header {
     display: flex;
@@ -75,50 +73,46 @@ nav a:hover {
     transform: scale(1.1);
 }
 
-
 /* Headings */
-h1 {
-    justify-self: center;
-    font-family: 'RobotoCondensed';
-    margin: 20px;
-    font-size: 50px;
-    margin-bottom: 40px;
-}
 
-h2 {
-    justify-self: center;
-    font-family: 'RobotoCondensed';
-    margin: 20px;
-}
-
-
-.delivery-row{
+.delivery-row {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-}
-
-/* Left Content */
-.left-content {
-    width: 50%;
+    padding: 20px;
 }
 
 
-/* Links Section */
-.links {
+
+.order-now h1 {
+    font-size: 30px;
+    font-family: 'Qilkabold';
+}
+
+.pick-up h1 {
+    font-size: 30px;
+    font-family: 'Qilkabold';;
+}
+
+.order-now{
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 40px;
-    margin-top: 20px;
+    flex-direction: column;
+    align-items: center;
 }
+
+.pick-up{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 
 .link-card {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 150px;
-    padding: 34px;
+    width: 200px; /* Adjust width as needed */
+    padding: 20px;
     text-decoration: none;
     border-radius: 10px;
     background-color: #ffffff; 
@@ -127,6 +121,8 @@ h2 {
     position: relative; 
     overflow: hidden; 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-height: 250px; /* Adjust min-height as needed */
+    box-sizing: border-box;
 }
 
 .link-card:hover {
@@ -170,9 +166,10 @@ h2 {
     margin-bottom: 10px;
 }
 
-#Deliveroo{
-    width: 250px;
+#momo_icon{
+    width: 200px;
 }
+
 
 /* Right Images */
 .right-images {
@@ -228,92 +225,6 @@ h2 {
     opacity: 1;
 }
 
-/* Pickup Options Section */
-.pickup-options {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: 'RobotoCondensed';
-    font-size: 20px;
-    border: solid 1px black;
-    padding: 30px 20px;
-    border-radius: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
-    background-color: #ffffff;
-}
-
-.pickup-options h2, .pickup-options p {
-    text-align: center;
-    margin: 15px;
-}
-
-/* Pick-Up Link Card Styles */
-.pickup-link-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 150px;
-    padding: 20px;
-    text-decoration: none;
-    border-radius: 10px;
-    background-color: #ffffff; 
-    border: 1px solid #dcdcdc; 
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-    position: relative; 
-    overflow: hidden; 
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin-top: 10px; 
-}
-
-.pickup-link-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-}
-
-/* Metal Gleam Effect */
-.pickup-link-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -75%;
-    width: 50%;
-    height: 100%;
-    background: linear-gradient(
-        120deg,
-        rgba(255, 255, 255, 0) 0%,
-        rgba(255, 255, 255, 0.8) 50%,
-        rgba(255, 255, 255, 0) 100%
-    );
-    transform: skewX(-25deg);
-}
-
-.pickup-link-card:hover::before {
-    animation: pickup-gleam 1s forwards;
-}
-
-@keyframes pickup-gleam {
-    from {
-        left: -75%;
-    }
-    to {
-        left: 125%;
-    }
-}
-
-/* Image and Text Inside Pick-Up Link Card */
-.pickup-link-card img {
-    width: 100px;
-    height: auto;
-    margin-bottom: 10px;
-}
-
-.pickup-link-card span {
-    font-family: 'RobotoCondensed';
-    font-size: 18px;
-    color: #333;
-}
-
 .Dishes {
     display: flex;
     flex-direction: column;
@@ -323,9 +234,11 @@ h2 {
     width: 100%;
     max-width: 1200px; /* Adjust width as needed */
 }
+
 .Dishes h2{
     margin-bottom: 5px;
     font-size: 40px;
+    font-family: Qilkabold;
 }
 
 .Dishes p{
@@ -373,7 +286,6 @@ footer p {
     font-family: 'RobotoCondensed';
     src: url('/font-family/RobotoCondensed-VariableFont_wght.ttf') format('truetype');
 }
-
 
 /* Menu Icon Styles */
 .menu-icon {
@@ -486,50 +398,31 @@ body.no-scroll {
     }
 
     h1{
-        margin-bottom: 5px;
+        margin-bottom: 20px;
     }
 
     .delivery-row {
         flex-direction: column;
         align-items: center;
-        width: 100%;
     }
 
-    .links {
-        flex-direction: row;
-        gap: 20px;
-        padding: 20px;
-        width: 100%;
-        max-width: 50px;
-        margin: 0 auto;
+    .order-options {
+        flex-direction: column;
+        align-items: center;
     }
 
     .link-card {
-        height: 140px;
-        padding: 30px 85px;
-        
+        width: 80%;
+        margin-bottom: 20px;
     }
 
     .link-card img {
-        width: 100px; /* Adjust as needed for smaller size */
+        width: 180px;
     }
 
-    #Deliveroo {
-        width: 220px;
-    }
-
-    #Uber{
-        width: 170px;
-    }
-
-    .pickup-options{
-        border: none;
-        box-shadow: none;
-    }
-
-   .Dishes{
+    .Dishes{
     margin-top: 5px;
-   }
+    }
 
     .right-images {
         display: grid;
@@ -547,11 +440,8 @@ body.no-scroll {
         height: 140px;
         border: 1px solid orange;
     }
-
-    
 }
 
-    
 @media (min-width: 768px) and (max-width: 1024px) {
     header {
         display: flex;
@@ -590,35 +480,18 @@ body.no-scroll {
         transform: scale(1.1);
     }
 
-    .delivery-row{
-        margin-right: 20px;
-    }
-    
-    .order-now{
-        width: 80%;
-    }
-
-    h1{
-        margin-bottom: 2px;
-    }
-
-
-    .pickup-options{
-        padding: 10px;
-        margin-top: 10px;
-    }
-    
 }
-
 
 @media (min-width: 1304px){
     .delivery-row {
         display: flex;
         flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        gap: 90px; /* Adjust gap as needed */
-        max-width: 1304px; /* Limit width to keep items centered */
-        margin: 0 auto; /* Center within the page */
+        justify-content: space-between;
+        max-width: 1304px;
+        margin: 0 auto;
+    }
+
+    .order-now, .pick-up {
+        padding: 0 100px; /* Add horizontal padding to increase space */
     }
 }
