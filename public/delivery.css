@@ -80,54 +80,74 @@ nav a:hover {
     flex-direction: row;
     justify-content: space-evenly;
     padding: 20px;
+    background: linear-gradient(rgba(66, 65, 65, 0.7), rgba(0, 0, 0, 0.7)),
+     
+    url('/content/bg3_try.jpg');
+    background-size: cover;
+    background-position:center;
+    background-attachment: scroll;
+    margin-top: 20px;
+    padding: 60px 20px;
 }
 
-
-
-.order-now h1 {
+.order-now h1, .pick-up h1 {
     font-size: 30px;
     font-family: 'Qilkabold';
+    color: #ffffff;
+    position: relative;
+    text-shadow: 1px 1px 0 #444, 2px 2px 0 #333, 3px 3px 0 #222;
 }
 
-.pick-up h1 {
+.title-delivery{
     font-size: 30px;
-    font-family: 'Qilkabold';;
+    font-family: 'Qilkabold';
+    background: linear-gradient(135deg, #1b1a1a, #0e0b0b); /* Subtle white gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Makes gradient visible on text */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
 }
 
-.order-now{
+
+@keyframes grain {
+    0%, 100% {
+        background-position: 0px 0px;
+    }
+    50% {
+        background-position: 5px 5px;
+    }
+}
+
+
+
+.order-now, .pick-up {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 10px;
 }
-
-.pick-up{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 
 .link-card {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 200px; /* Adjust width as needed */
+    width: 300px;
     padding: 20px;
     text-decoration: none;
-    border-radius: 10px;
-    background-color: #ffffff; 
-    border: 0.5px solid #ececec; 
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-    position: relative; 
-    overflow: hidden; 
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    min-height: 250px; /* Adjust min-height as needed */
+    border-radius: 12px;
+    background: linear-gradient(135deg, #f7f7f7, #e6e6e6, #ffffff, #cccccc, #ffffff); /* Shiny Chrome gradient */
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(176, 176, 176, 0.5); /* Chrome-like border */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.3s ease;
+    min-height: 250px;
     box-sizing: border-box;
 }
 
 .link-card:hover {
     transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 14px rgba(0, 0, 0, 0.2);
 }
 
 /* Metal Gleam Effect */
@@ -160,6 +180,7 @@ nav a:hover {
     }
 }
 
+
 .link-card img {
     width: 180px;
     height: auto;
@@ -170,6 +191,15 @@ nav a:hover {
     width: 200px;
 }
 
+.hr-line {
+    display: block;
+    flex-shrink: 0;
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #ffb766, transparent);
+    margin: 45px 15px 0px;
+}
+  
 
 /* Right Images */
 .right-images {
@@ -319,11 +349,14 @@ footer p {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 1); /* Full opacity */
     z-index: 1000;
     align-items: center;
     justify-content: center;
     overflow-y: hidden;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                url('/content/pexels-mikhail-nilov-8093598.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
 /* Active Overlay: Slide-in Animation */
@@ -404,6 +437,7 @@ body.no-scroll {
     .delivery-row {
         flex-direction: column;
         align-items: center;
+        margin-top: 0px;
     }
 
     .order-options {
@@ -412,8 +446,8 @@ body.no-scroll {
     }
 
     .link-card {
-        width: 80%;
-        margin-bottom: 20px;
+        width: 100%;
+        margin-bottom: 30px;
     }
 
     .link-card img {
@@ -487,11 +521,11 @@ body.no-scroll {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        max-width: 1304px;
-        margin: 0 auto;
+        margin: 20px auto;
+        border-radius: 10px;
     }
 
     .order-now, .pick-up {
-        padding: 0 100px; /* Add horizontal padding to increase space */
+        padding: 0 200px; /* Add horizontal padding to increase space */
     }
 }
