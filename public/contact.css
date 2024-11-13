@@ -76,36 +76,51 @@ nav a:hover {
 /* Headings */
 h1, h2 {
     font-family: 'Qilkabold';
-    margin: 20px;
+    margin: 5px;
 }
 
 /* Contact Container */
+.contact-bg-wrapper {
+    background: linear-gradient(rgba(56, 55, 55, 0.7), rgba(58, 56, 56, 0.7)),
+        url('/content/bg_contact5.jpg');
+    background-size: cover;
+    background-position: center;
+    /* min-height: 100vh; */
+    padding: 30px 0;
+    width: 100%;
+    margin: 20px 0px 0px;
+}
+
 .contact-container {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     gap: 20px;
     max-width: 1200px;
-    margin: 30px auto;
+    width: 100%; 
+    margin: 0 auto;
     padding: 20px;
     box-sizing: border-box;
-    flex: 1;
 }
 
-.info, .contact {
-    width: 100%;
+.info {
+    width: 30%; 
     box-sizing: border-box;
 }
 
 .contact{
+    width: 30%;
     font-family: 'RobotoCondensed';
-    border: solid 1px black;
-    padding: 30px 60px;
+    border: solid 1px #ffb766;
+    padding: 16px 32px 23px;
     border-radius: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     height: fit-content;
+    background-color: white;
 }
 .info{
     margin-top: 50px;
+    color: white;
 }
 
 /* Info Section */
@@ -117,9 +132,43 @@ h1, h2 {
     font-family: 'RobotoCondensed';
 }
 
+.info-item a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    padding: 2px 4px;
+    border-radius: 4px;
+    text-shadow: 0px 0px 5px rgba(255, 183, 102, 0.6);
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.info-item a:hover {
+    color: #ffb766;
+    text-shadow: 0px 0px 8px rgba(255, 183, 102, 1);
+}
+
+
 .info-item img {
     width: 25px;
 }
+
+#clock{
+    margin-bottom: 40px;
+    margin-right: 0px;
+} 
+
+.hours {
+    font-family: 'RobotoCondensed', sans-serif;
+    font-size: 16px;
+    color: white;
+}
+
+.hours p {
+    margin: 3px 0;
+    text-align: left;
+}
+
+
 
 /* Contact Form Styles */
 form {
@@ -150,6 +199,7 @@ form button {
     cursor: pointer;
     transition: transform 0.3s ease, background-color 0.3s ease;
     font-family: 'RobotoCondensed';
+    margin-top: 30px;
 }
 
 form button:hover {
@@ -227,11 +277,14 @@ footer p {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 1); /* Full opacity */
     z-index: 1000;
     align-items: center;
     justify-content: center;
     overflow-y: hidden;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                url('/content/pexels-mikhail-nilov-8093598.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
 /* Active Overlay: Slide-in Animation */
@@ -314,8 +367,6 @@ body.no-scroll {
     100% { transform: translateX(0); }
 }
 
-
-
 /* Mobile Devices */
 @media (max-width: 767px) {
     header {
@@ -334,14 +385,14 @@ body.no-scroll {
 
     .media {
         order: -1;
-        margin-left: 10px;
+        margin-left: 0px;
         flex-direction: row-reverse;
     }
 
     .menu-icon {
         display: block;
         cursor: pointer;
-        margin-right: 20px;
+        margin-right: 0px;
     }
 
     h1{
@@ -354,27 +405,39 @@ body.no-scroll {
         align-self: center;
     }
 
+    
+
+    .contact-bg-wrapper{
+        margin-top: 0px;
+    }
+
     .contact-container{
+        display: flex;
         flex-direction: column;
+        align-items:  center;
+        min-height: 100vh;
+        justify-content: flex-start;
+        /* margin-top: 20px; */
     }
 
     .contact{
         order: -1;
+        width: 280px;
     }
 
     .info {
         display: flex;
         flex-direction: column;
-        align-items: flex-start; /* Align items to the left within the container */
-        margin: 0 auto; /* Center the .info container horizontally */
+        align-items: flex-start; 
+        margin: 0 auto; 
         width: 100%;
-        max-width: 250px; /* Control width of the .info section */
+        max-width: 250px; 
     }
 
     .info-item {
         display: flex;
         align-items: center;
-        gap: 10px; /* Space between icon and text */
+        gap: 10px; 
         text-align: left;
     }
     
@@ -402,7 +465,7 @@ body.no-scroll {
     /* Adjust social media icons and menu icon */
     .media {
         order: -1;
-        margin-left: 10px;
+        margin-left: 0px;
         display: flex;
         flex-direction: row-reverse;
     }
@@ -412,21 +475,33 @@ body.no-scroll {
         display: block;
         transition: transform 0.3s ease;
         cursor: pointer;
-        margin-right: 20px;
+        margin-right: 0px;
     }
 
     .menu-icon:hover {
         transform: scale(1.1);
     }
 
+    .contact-bg-wrapper {
+        background: linear-gradient(rgba(56, 55, 55, 0.7), rgba(58, 56, 56, 0.7)),
+            url('/content/bg_contact5.jpg');
+        background-size: cover;
+        background-position: center;
+        min-height: 100vh;
+        padding: 30px 0;
+        width: 100%;
+        margin: 0px;
+    }
+
+    .contact{
+        width: 40%;
+    }
+
 }
 
 
-@media (max-width: 767px) and (min-width: 412px) {
-    .contact {
-        padding: 25px 50px; /* Slightly increase padding */
-        font-size: 15px; /* Adjust font size for better readability */
-        max-width: 350px; /* Increase max-width */
-        margin: 0 auto; /* Center the contact section */
+@media (min-width: 1024px){
+    .contact-bg-wrapper{
+        height: 100vh;
     }
 }

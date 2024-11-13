@@ -26,7 +26,7 @@ h1 {
     text-align: center;
     font-family: 'Qilkabold';
     font-size: 50px;
-    margin: 20px auto; 
+    margin: 20px auto 0px; 
     align-items: center;
 }
 
@@ -87,24 +87,40 @@ nav a:hover {
     flex-direction: row;
     justify-content: space-evenly;
     text-align: start;
+    padding: 30px;
+    padding-top: 0px;
 }
 
+.hr-line {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #ffb766, transparent);
+    margin: 2px 15px;
+  }
+  
+
 .text-content {
-    width: 50%;
-    margin-top: 150px;
-    margin-left: 20px;
-    text-align: center;
-    font-size: 20px;
+    width: 35%;
+    text-align: left;
+    margin-top: 40px;
+    margin-left: 40px;
+   
+}
+
+.text-content.right{
+    margin-left: 0px;
 }
 
 .text-content a, .text-content-center a {
     display: inline-block;
-    margin: 8px;
     color: #f43a09;
     background-color: #ffb766;
     text-decoration: none;
-    padding: 10px;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 18px;
     border: solid 1px rgb(2, 2, 2);
+    font-family: 'RobotoCondensed', sans-serif;
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
@@ -114,13 +130,29 @@ nav a:hover {
     color: #fff;
 }
 
+.text-content h2{
+    font-family: 'Qilkabold';
+}
+
+.text-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #312c2c;
+    margin-bottom: 30px;
+}
+
 .image-content img {
-    width: 100%;
-    height: auto;
-    max-width: 500px;
+    width: 80%;
+    height: 80%;
+    max-width: 400px;
     margin: 40px;
     border-radius: 20px;
     border: solid 1px #ffb766;
+    transition: transform 0.3s ease;
+}
+
+.image-content img:hover{
+    transform: scale(1.05);
 }
 
 /* Centered Content */
@@ -133,7 +165,14 @@ nav a:hover {
     font-family: 'RobotoCondensed';
     text-align: center;
     font-size: 20px;
-    margin: 20px;
+    margin: 20px 200px;
+}
+
+.text-content-center h2{
+    font-family: 'Qilkabold';
+}
+.text-content-center p{
+    color: #312c2c;
 }
 
 /* Image Row Styles */
@@ -252,11 +291,14 @@ footer p {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 1); /* Full opacity */
     z-index: 1000;
     align-items: center;
     justify-content: center;
     overflow-y: hidden;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                url('/content/pexels-mikhail-nilov-8093598.jpg');
+    background-size: cover;
+    background-position: center
 }
 
 /* Active Overlay: Slide-in Animation */
@@ -327,7 +369,7 @@ body.no-scroll {
 
     .media {
         order: -1;
-        margin-left: 10px;
+        margin-left: 0px;
         display: flex;
         flex-direction: row-reverse;
     }
@@ -336,7 +378,7 @@ body.no-scroll {
         display: block;
         transition: transform 0.3s ease;
         cursor: pointer;
-        margin-right: 20px;
+        margin-right: 0px;
     }
 
     .menu-icon:hover {
@@ -355,13 +397,13 @@ body.no-scroll {
     .content-row .text-content,
     .content-row.reverse .text-content {
         width: 90%;
-        margin: 20px 0;
+        margin: 5px 0;
     }
 
     .content-row .image-content,
     .content-row.reverse .image-content {
         width: 100%;
-        margin: 20px 0;
+        margin: 10px 0;
         display: flex;
         justify-content: center;
     }
@@ -374,12 +416,19 @@ body.no-scroll {
         height: auto;
     }
 
-  
-    .content-row .text-content {
-        margin-top: 40px;
+    .text-content {
+        text-align: center;
     }
 
-    
+    .text-content-center {
+        margin: 20px 50px;
+    }
+
+    .content-row .text-content {
+        margin-top: 5px;
+    }
+
+ 
     .content-row.reverse .text-content {
         order: 1;
     }
@@ -397,7 +446,7 @@ body.no-scroll {
     padding: 0 4%; 
     width: 100%;
     box-sizing: border-box; 
-    margin-bottom: 4%;
+    margin-bottom: 20px;
 }
 
 .image-container {
@@ -434,12 +483,6 @@ body.no-scroll {
 .image-container:hover .image-text {
     opacity: 1;
 }
-
-
-.location iframe {
-    width: 100%;
-    height: 300px;
-}
 }
 
 
@@ -471,7 +514,7 @@ body.no-scroll {
     
     .media {
         order: -1;
-        margin-left: 10px;
+        margin-left: 0px;
         display: flex;
         flex-direction: row-reverse;
     }
@@ -480,14 +523,21 @@ body.no-scroll {
         display: block;
         transition: transform 0.3s ease;
         cursor: pointer;
-        margin-right: 20px;
+        margin-right: 0px;
     }
 
     .menu-icon:hover {
         transform: scale(1.1);
     }
 
-    
+    .text-content {
+        text-align: center;
+    }
+
+    .text-content-center {
+        margin: 20px 50px;
+    }
+
     .content-row,
     .content-row.reverse {
         flex-direction: column;
@@ -608,12 +658,19 @@ body.no-scroll {
 
 
 @media (min-width: 1536px) {
-    .content-row{
-        margin: 20px 200px;
+    .content-row {
+        max-width: 1200px;
+        margin: 20px auto;
+        padding: 0 20px;
     }
 
     .image-row {
-        margin: 40px 200px;
+        max-width: 1200px;
+        margin: 40px auto;
+        padding: 0 40px;
+        display: flex;
+        gap: 30px; /* Adds space between images */
+        justify-content: center;
     }
 
 }

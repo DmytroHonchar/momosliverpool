@@ -9,8 +9,6 @@ body, html {
     flex-direction: column; 
 }
 
-
-
 /* Header Styles */
 header {
     display: flex;
@@ -75,63 +73,81 @@ nav a:hover {
     transform: scale(1.1);
 }
 
-
 /* Headings */
-h1 {
-    justify-self: center;
-    font-family: 'RobotoCondensed';
-    margin: 20px;
-    font-size: 50px;
-    margin-bottom: 40px;
-}
 
-h2 {
-    justify-self: center;
-    font-family: 'RobotoCondensed';
-    margin: 20px;
-}
-
-
-.delivery-row{
+.delivery-row {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-}
-
-/* Left Content */
-.left-content {
-    width: 50%;
-}
-
-
-/* Links Section */
-.links {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 40px;
+    padding: 20px;
+    background: linear-gradient(rgba(66, 65, 65, 0.7), rgba(0, 0, 0, 0.7)),
+     
+    url('/content/bg3_try.jpg');
+    background-size: cover;
+    background-position:center;
+    background-attachment: scroll;
     margin-top: 20px;
+    padding: 60px 20px;
+}
+
+.order-now h1, .pick-up h1 {
+    font-size: 30px;
+    font-family: 'Qilkabold';
+    color: #ffffff;
+    position: relative;
+    text-shadow: 1px 1px 0 #444, 2px 2px 0 #333, 3px 3px 0 #222;
+}
+
+.title-delivery{
+    font-size: 30px;
+    font-family: 'Qilkabold';
+    background: linear-gradient(135deg, #1b1a1a, #0e0b0b); /* Subtle white gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Makes gradient visible on text */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+
+@keyframes grain {
+    0%, 100% {
+        background-position: 0px 0px;
+    }
+    50% {
+        background-position: 5px 5px;
+    }
+}
+
+
+
+.order-now, .pick-up {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
 }
 
 .link-card {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 150px;
-    padding: 34px;
+    width: 300px;
+    padding: 20px;
     text-decoration: none;
-    border-radius: 10px;
-    background-color: #ffffff; 
-    border: 0.5px solid #ececec; 
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-    position: relative; 
-    overflow: hidden; 
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 12px;
+    background: white;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(176, 176, 176, 0.5); /* Chrome-like border */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.3s ease;
+    min-height: 250px;
+    box-sizing: border-box;
 }
 
 .link-card:hover {
     transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 14px rgba(0, 0, 0, 0.2);
 }
 
 /* Metal Gleam Effect */
@@ -164,15 +180,26 @@ h2 {
     }
 }
 
+
 .link-card img {
     width: 180px;
     height: auto;
     margin-bottom: 10px;
 }
 
-#Deliveroo{
-    width: 250px;
+#momo_icon{
+    width: 200px;
 }
+
+.hr-line {
+    display: block;
+    flex-shrink: 0;
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #ffb766, transparent);
+    margin: 45px 15px 0px;
+}
+  
 
 /* Right Images */
 .right-images {
@@ -188,7 +215,7 @@ h2 {
     position: relative;
     overflow: hidden;
     border-radius: 8px;
-    border: solid 1px orange;
+    border: solid 1px #ffb766;
     transition: transform 0.3s ease;
     transform-origin: center;
     height: 250px;
@@ -228,92 +255,6 @@ h2 {
     opacity: 1;
 }
 
-/* Pickup Options Section */
-.pickup-options {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: 'RobotoCondensed';
-    font-size: 20px;
-    border: solid 1px black;
-    padding: 30px 20px;
-    border-radius: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
-    background-color: #ffffff;
-}
-
-.pickup-options h2, .pickup-options p {
-    text-align: center;
-    margin: 15px;
-}
-
-/* Pick-Up Link Card Styles */
-.pickup-link-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 150px;
-    padding: 20px;
-    text-decoration: none;
-    border-radius: 10px;
-    background-color: #ffffff; 
-    border: 1px solid #dcdcdc; 
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-    position: relative; 
-    overflow: hidden; 
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin-top: 10px; 
-}
-
-.pickup-link-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-}
-
-/* Metal Gleam Effect */
-.pickup-link-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -75%;
-    width: 50%;
-    height: 100%;
-    background: linear-gradient(
-        120deg,
-        rgba(255, 255, 255, 0) 0%,
-        rgba(255, 255, 255, 0.8) 50%,
-        rgba(255, 255, 255, 0) 100%
-    );
-    transform: skewX(-25deg);
-}
-
-.pickup-link-card:hover::before {
-    animation: pickup-gleam 1s forwards;
-}
-
-@keyframes pickup-gleam {
-    from {
-        left: -75%;
-    }
-    to {
-        left: 125%;
-    }
-}
-
-/* Image and Text Inside Pick-Up Link Card */
-.pickup-link-card img {
-    width: 100px;
-    height: auto;
-    margin-bottom: 10px;
-}
-
-.pickup-link-card span {
-    font-family: 'RobotoCondensed';
-    font-size: 18px;
-    color: #333;
-}
-
 .Dishes {
     display: flex;
     flex-direction: column;
@@ -323,9 +264,11 @@ h2 {
     width: 100%;
     max-width: 1200px; /* Adjust width as needed */
 }
+
 .Dishes h2{
     margin-bottom: 5px;
     font-size: 40px;
+    font-family: Qilkabold;
 }
 
 .Dishes p{
@@ -374,7 +317,6 @@ footer p {
     src: url('/font-family/RobotoCondensed-VariableFont_wght.ttf') format('truetype');
 }
 
-
 /* Menu Icon Styles */
 .menu-icon {
     display: none;
@@ -407,11 +349,14 @@ footer p {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 1); /* Full opacity */
     z-index: 1000;
     align-items: center;
     justify-content: center;
     overflow-y: hidden;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                url('/content/pexels-mikhail-nilov-8093598.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
 /* Active Overlay: Slide-in Animation */
@@ -475,61 +420,44 @@ body.no-scroll {
 
     .media {
         order: -1;
-        margin-left: 10px;
+        margin-left: 0px;
         flex-direction: row-reverse;
     }
 
     .menu-icon {
         display: block;
         cursor: pointer;
-        margin-right: 20px;
+        margin-right: 0px;
     }
 
     h1{
-        margin-bottom: 5px;
+        margin-bottom: 20px;
     }
 
     .delivery-row {
         flex-direction: column;
         align-items: center;
-        width: 100%;
+        margin-top: 0px;
+        background-position: 80% bottom;
     }
 
-    .links {
-        flex-direction: row;
-        gap: 20px;
-        padding: 20px;
-        width: 100%;
-        max-width: 50px;
-        margin: 0 auto;
+    .order-options {
+        flex-direction: column;
+        align-items: center;
     }
 
     .link-card {
-        height: 140px;
-        padding: 30px 85px;
-        
+        width: 100%;
+        margin-bottom: 30px;
     }
 
     .link-card img {
-        width: 100px; /* Adjust as needed for smaller size */
+        width: 180px;
     }
 
-    #Deliveroo {
-        width: 220px;
-    }
-
-    #Uber{
-        width: 170px;
-    }
-
-    .pickup-options{
-        border: none;
-        box-shadow: none;
-    }
-
-   .Dishes{
+    .Dishes{
     margin-top: 5px;
-   }
+    }
 
     .right-images {
         display: grid;
@@ -547,11 +475,8 @@ body.no-scroll {
         height: 140px;
         border: 1px solid orange;
     }
-
-    
 }
 
-    
 @media (min-width: 768px) and (max-width: 1024px) {
     header {
         display: flex;
@@ -573,7 +498,7 @@ body.no-scroll {
     /* Adjust social media icons and menu icon */
     .media {
         order: -1;
-        margin-left: 10px;
+        margin-left: 0px;
         display: flex;
         flex-direction: row-reverse;
     }
@@ -583,42 +508,25 @@ body.no-scroll {
         display: block;
         transition: transform 0.3s ease;
         cursor: pointer;
-        margin-right: 20px;
+        margin-right: 0px;
     }
 
     .menu-icon:hover {
         transform: scale(1.1);
     }
 
-    .delivery-row{
-        margin-right: 20px;
-    }
-    
-    .order-now{
-        width: 80%;
-    }
-
-    h1{
-        margin-bottom: 2px;
-    }
-
-
-    .pickup-options{
-        padding: 10px;
-        margin-top: 10px;
-    }
-    
 }
-
 
 @media (min-width: 1304px){
     .delivery-row {
         display: flex;
         flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        gap: 90px; /* Adjust gap as needed */
-        max-width: 1304px; /* Limit width to keep items centered */
-        margin: 0 auto; /* Center within the page */
+        justify-content: space-between;
+        margin: 20px auto;
+        border-radius: 10px;
+    }
+
+    .order-now, .pick-up {
+        padding: 0 200px; /* Add horizontal padding to increase space */
     }
 }

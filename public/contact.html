@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
+     <!-- Preload Background Image for Overlay -->
+     <link rel="preload" href="/content/pexels-mikhail-nilov-8093598.jpg" as="image">
          <!-- Favicon setup for standard browsers, modern browsers, and iOS devices -->
     <link rel="icon" href="/content/for_ico.svg" type="image/x-icon">
     <link rel="icon" type="image/png" sizes="32x32" href="/content/for_ico.svg">
@@ -47,6 +49,9 @@
 <div class="nav-overlay">
     <span class="close-btn">×</span>
     <nav>
+        <a href="/delivery" class="hidden-link">
+            <img class="momo-sticker" src="/content/for_mob.svg" alt="Momo Dumpling" style="width: 45px; margin-right: 15px;" >
+        </a>
         <a href="/">Home</a>
         <a href="/about">About</a>
         <a href="/menu">Menu</a>
@@ -55,6 +60,7 @@
     </nav>
 </div>
 
+<div class="contact-bg-wrapper">
     <!-- Contact Container -->
     <div class="contact-container">
         <!-- Info Section -->
@@ -62,26 +68,30 @@
             <h2>Info</h2>
             <div class="info-item">
                 <img src="/content/message.png" alt="Email Icon"> 
-                <p>momosIvp@gmail.com</p>
+                <p><a href="mailto:momosIvp@gmail.com">momosIvp@gmail.com</a></p>
             </div>
             <div class="info-item">
                 <img src="/content/phone.png" alt="Phone Icon"> 
-                <p>+44 7453 955 483</p>
+                <p><a href="tel:+447453955483">+44 7453 955 483</a></p>
             </div>
             <div class="info-item">
                 <img src="/content/map.png" alt="Address Icon"> 
-                <p>72 Lime St, Liverpool L1 1JN</p>
+                <p><a href="https://www.google.com/maps/search/?api=1&query=72+Lime+St,+Liverpool+L1+1JN" target="_blank">72 Lime St, Liverpool L1 1JN</a></p>
             </div>
             <div class="info-item">
-                <img src="/content/clock.png" alt="Hours Icon">
-                <p>1:00 pm – 09:00/10:00 pm</p>
+                <img src="/content/clock.png" alt="Hours Icon" id="clock">
+                <div class="hours">
+                    <p>Sunday: 1–9 pm</p>
+                    <p>Monday: 1–9:30 pm</p>
+                    <p>Tuesday – Saturday: 1–10 pm</p>
+                </div>
             </div>
         </div>
 
         <!-- Contact Form -->
         <div class="contact">
             <h1>Contact Us</h1>
-            <p>Feel free to contact us any time. We will get back to you as soon as we can.</p>
+            <p>Feel free to contact us any time! We will get back to you as soon as we can.</p>
             <form action="/contact" method="post">
                 <label for="name">Name</label>
                   <input type="text" id="name" name="name" required>
@@ -104,6 +114,8 @@
             </form>
         </div>
     </div>
+
+</div>
 
     <!-- Footer -->
     <footer>
