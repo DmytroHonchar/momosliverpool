@@ -132,9 +132,43 @@ h1, h2 {
     font-family: 'RobotoCondensed';
 }
 
+.info-item a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    padding: 2px 4px;
+    border-radius: 4px;
+    text-shadow: 0px 0px 5px rgba(255, 183, 102, 0.6);
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.info-item a:hover {
+    color: #ffb766;
+    text-shadow: 0px 0px 8px rgba(255, 183, 102, 1);
+}
+
+
 .info-item img {
     width: 25px;
 }
+
+#clock{
+    margin-bottom: 40px;
+    margin-right: 0px;
+} 
+
+.hours {
+    font-family: 'RobotoCondensed', sans-serif;
+    font-size: 16px;
+    color: white;
+}
+
+.hours p {
+    margin: 3px 0;
+    text-align: left;
+}
+
+
 
 /* Contact Form Styles */
 form {
@@ -333,8 +367,6 @@ body.no-scroll {
     100% { transform: translateX(0); }
 }
 
-
-
 /* Mobile Devices */
 @media (max-width: 767px) {
     header {
@@ -372,6 +404,8 @@ body.no-scroll {
         margin-top: 2px;
         align-self: center;
     }
+
+    
 
     .contact-bg-wrapper{
         margin-top: 0px;
