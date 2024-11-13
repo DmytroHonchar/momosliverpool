@@ -369,7 +369,7 @@ body.no-scroll {
 
     .media {
         order: -1;
-        margin-left: 10px;
+        margin-left: 0px;
         display: flex;
         flex-direction: row-reverse;
     }
@@ -378,7 +378,7 @@ body.no-scroll {
         display: block;
         transition: transform 0.3s ease;
         cursor: pointer;
-        margin-right: 20px;
+        margin-right: 0px;
     }
 
     .menu-icon:hover {
@@ -514,7 +514,7 @@ body.no-scroll {
     
     .media {
         order: -1;
-        margin-left: 10px;
+        margin-left: 0px;
         display: flex;
         flex-direction: row-reverse;
     }
@@ -523,7 +523,7 @@ body.no-scroll {
         display: block;
         transition: transform 0.3s ease;
         cursor: pointer;
-        margin-right: 20px;
+        margin-right: 0px;
     }
 
     .menu-icon:hover {

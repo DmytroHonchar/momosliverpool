@@ -420,14 +420,14 @@ body.no-scroll {
 
     .media {
         order: -1;
-        margin-left: 10px;
+        margin-left: 0px;
         flex-direction: row-reverse;
     }
 
     .menu-icon {
         display: block;
         cursor: pointer;
-        margin-right: 20px;
+        margin-right: 0px;
     }
 
     h1{
@@ -498,7 +498,7 @@ body.no-scroll {
     /* Adjust social media icons and menu icon */
     .media {
         order: -1;
-        margin-left: 10px;
+        margin-left: 0px;
         display: flex;
         flex-direction: row-reverse;
     }
@@ -508,7 +508,7 @@ body.no-scroll {
         display: block;
         transition: transform 0.3s ease;
         cursor: pointer;
-        margin-right: 20px;
+        margin-right: 0px;
     }
 
     .menu-icon:hover {

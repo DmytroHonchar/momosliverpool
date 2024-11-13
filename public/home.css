@@ -310,9 +310,9 @@ body.no-scroll {
 
 /* Mobile Devices */
 @media (max-width: 767px) {
-    header {
+    /* header {
         padding: 10px 20px;
-    }
+    } */
 
     header > nav {
         display: none;
@@ -324,7 +324,7 @@ body.no-scroll {
 
     .media {
         order: -1;
-        margin-left: 10px;
+        margin-left: 0px;
         display: flex;
         flex-direction: row-reverse;
     }
@@ -333,7 +333,7 @@ body.no-scroll {
         display: block;
         transition: transform 0.3s ease;
         cursor: pointer;
-        margin-right: 20px;
+        margin-right: 0px;
     }
 
     .menu-icon:hover {
@@ -344,6 +344,7 @@ body.no-scroll {
         /* max-width: 90%; */
         /* margin: 20px auto; */
         height: 350px;
+        margin-top: 0px;
     }
 
     .hero-background {
@@ -390,9 +391,9 @@ body.no-scroll {
 
 /* Tablets */
 @media (min-width: 768px) and (max-width: 1024px) {
-    header {
+    /* header {
         padding: 10px 20px;
-    }
+    } */
 
     header > nav {
         display: none;
@@ -404,7 +405,7 @@ body.no-scroll {
 
     .media {
         order: -1;
-        margin-left: 10px;
+        margin-left: 0px;
         display: flex;
         flex-direction: row-reverse;
     }
@@ -413,7 +414,7 @@ body.no-scroll {
         display: block;
         transition: transform 0.3s ease;
         cursor: pointer;
-        margin-right: 20px;
+        margin-right: 0px;
     }
 
     .menu-icon:hover {
@@ -423,6 +424,7 @@ body.no-scroll {
     .hero-section {
         /* max-width: 90%; */
         height: 450px;
+        margin-top: 0px;
     }
 
     .hero-background {
