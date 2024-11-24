@@ -8,7 +8,6 @@ const helmet = require('helmet');
 const validator = require('validator');
 const rateLimit = require('express-rate-limit');
 
-
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -46,7 +45,6 @@ const transporter = nodemailer.createTransport({
     },
 });
 
-
 // Rate limiting for contact form submissions only
 const contactFormLimiter = rateLimit({
     windowMs: 15 * 60 * 1000, // 15 minutes
@@ -79,7 +77,8 @@ app.post('/contact', contactFormLimiter, async (req, res) => {
     // Sanitize inputs
     name = validator.escape(name.trim());
     email = validator.normalizeEmail(email.trim());
-    message = validator.escape(message.trim());
+    // Remove validator.escape() from message
+    message = message.trim();
 
     // Validate email
     if (!validator.isEmail(email)) {
